@@ -5,6 +5,7 @@ import MentalHealthProfile from "./pages/MentalHealthProfile";
 import FitnessForm from "./pages/FitnessForm";
 import MentalHealthForm from "./pages/MentalHealthForm";
 import { Toaster } from "react-hot-toast";
+import FormsContextProvider from "./context/FormsContext";
 
 function App() {
   return (
@@ -14,10 +15,38 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/perfil-fisico" element={<FitnessProfile />} />
-          <Route path="/perfil-mental" element={<MentalHealthProfile />} />
-          <Route path="/formulario-fisico" element={<FitnessForm />} />
-          <Route path="/formulario-mental" element={<MentalHealthForm />} />
+          <Route
+            path="/perfil-fisico"
+            element={
+              <FormsContextProvider>
+                <FitnessProfile />
+              </FormsContextProvider>
+            }
+          />
+          <Route
+            path="/perfil-mental"
+            element={
+              <FormsContextProvider>
+                <MentalHealthProfile />
+              </FormsContextProvider>
+            }
+          />
+          <Route
+            path="/formulario-fisico"
+            element={
+              <FormsContextProvider>
+                <FitnessForm />
+              </FormsContextProvider>
+            }
+          />
+          <Route
+            path="/formulario-mental"
+            element={
+              <FormsContextProvider>
+                <MentalHealthForm />
+              </FormsContextProvider>
+            }
+          />
         </Routes>
       </main>
     </>
