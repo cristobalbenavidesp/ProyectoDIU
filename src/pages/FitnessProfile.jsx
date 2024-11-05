@@ -6,22 +6,22 @@ function FitnessProfile() {
   // Array de artículos específicos para la sección de estado físico
   const fitnessArticles = [
     {
-      title: "8 tips para mejorar la resistencia física - Pluxee",
-      description: "La resistencia física es fundamental para cualquier actividad...",
-      image: "https://via.placeholder.com/150", // Reemplaza con la URL real de la imagen
-      url: "https://example.com/fitness1",
+      title: "Cómo mejorar la condición física - UFV Madrid",
+      description: "¿Por qué es bueno mejorar la condición física?...",
+      image: "https://fpsuperiorufv.es/blog/wp-content/uploads/2024/04/como-mejorar-la-condicion-fisica.png", // Reemplaza con la URL real de la imagen
+      url: "https://fpsuperiorufv.es/blog/como-mejorar-la-condicion-fisica/",
     },
     {
-      title: "Fortalecimiento muscular: vuélvete más fuerte - Mayo Clinic",
-      description: "Learn more about services at Mayo Clinic.",
-      image: "https://via.placeholder.com/150", // Reemplaza con la URL real de la imagen
-      url: "https://example.com/fitness2",
+      title: "Los mejores ejercicios de fortalecimiento muscular",
+      description: "el fortalecimiento muscular puede ser la solución",
+      image: "https://www.gladiatorfit.ch/wp-content/uploads/2023/02/renforcement-musculaire-exercices-1.jpg", // Reemplaza con la URL real de la imagen
+      url: "https://www.gladiatorfit.ch/es/blog/los-mejores-ejercicios-de-fortalecimiento-muscular",
     },
     {
-      title: "Tips de Nutrición para Mejorar tu Calidad de Vida de Forma Fácil",
-      description: "Te damos 10 tips de nutrición sencillos de llevar a cabo para que tengas una vida más saludable.",
-      image: "https://via.placeholder.com/150", // Reemplaza con la URL real de la imagen
-      url: "https://example.com/fitness3",
+      title: "Siete ejercicios que puedes hacer en casa para mejorar tu flexibilidad",
+      description: "La flexibilidad es una cualidad física muy importante.",
+      image: "https://i.blogs.es/6ff6aa/img_9399/1366_2000.webp", // Reemplaza con la URL real de la imagen
+      url: "https://www.vitonica.com/entrenamiento/siete-ejercicios-que-puedes-hacer-casa-para-mejorar-tu-flexibilidad",
     },
   ];
 
