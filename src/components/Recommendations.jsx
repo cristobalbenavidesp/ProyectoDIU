@@ -4,8 +4,8 @@ import Card from "./ui/Card";
 
 function Recommendations({ articles }) {
   return (
-    <article className="py-5 w-full h-fit bg-cover bg-center rounded-lg shadow-md p-5">
-      <h1 className="text-xl mb-5 text-center">Recomendaciones según tu estado</h1>
+    <article className="py-5 w-full h-fit bg-cover bg-center rounded-lg  p-5">
+      <h1 className="text-xl mb-5 text-center text-white font-semibold ">Recomendaciones según tu estado</h1>
       <ul className="flex flex-col gap-3 py-5">
         {articles.map((article, index) => (
           <li key={index} className="flex">

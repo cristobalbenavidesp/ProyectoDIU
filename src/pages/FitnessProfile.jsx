@@ -1,6 +1,7 @@
 import Recommendations from "../components/Recommendations";
 import StateEvolution from "../components/StateEvolution";
-import LinkButton from "../components/ui/LinkButton";
+import FormButton from "../components/ui/FormButton";
+import BackButton from "../components/ui/BackButton";
 
 function FitnessProfile() {
   // Array de artículos específicos para la sección de estado físico
@@ -26,19 +27,20 @@ function FitnessProfile() {
   ];
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-col items-center px-10 py-20">
-      <div className="absolute top-5 left-5">
-        <LinkButton type="secondary" href="/">
-          Volver a Inicio
-        </LinkButton>
+    <div className="relative w-full h-full min-h-screen">
+      <div className="absolute inset-0 bg-cover bg-left filter blur-sm" style={{ backgroundImage: 'url(/background.webp)' }}></div>
+      <div className="relative w-full h-full flex flex-col items-center px-10 py-20">
+        <div className="absolute top-5 left-5">
+          <BackButton href="/" />
+        </div>
+        <FormButton href="/formulario-fisico">
+          LLenar encuesta de estado físico
+        </FormButton>
+        <StateEvolution type="physical" />
+        
+        {/* Agrega Recommendations pasando fitnessArticles como prop */}
+        <Recommendations articles={fitnessArticles} />
       </div>
-      <LinkButton type="primary" href="/formulario-fisico">
-        LLenar encuesta de estado físico
-      </LinkButton>
-      <StateEvolution type="physical" />
-      
-      {/* Agrega Recommendations pasando fitnessArticles como prop */}
-      <Recommendations articles={fitnessArticles} />
     </div>
   );
 }

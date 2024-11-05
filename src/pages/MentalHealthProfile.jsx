@@ -1,44 +1,46 @@
 import Recommendations from "../components/Recommendations";
 import StateEvolution from "../components/StateEvolution";
-import LinkButton from "../components/ui/LinkButton";
+import FormButton from "../components/ui/FormButton";
+import BackButton from "../components/ui/BackButton";
 
 function MentalHealthProfile() {
   // Array de artículos específicos para la sección de salud mental
   const mentalHealthArticles = [
     {
-      title: "Cómo reducir el estrés en la vida diaria",
-      description: "El estrés puede tener un impacto negativo en nuestra salud mental y física. Aquí tienes algunos consejos para manejarlo.",
-      image: "https://via.placeholder.com/150", // Reemplaza con la URL real de la imagen
-      url: "https://example.com/mental1",
+      title: "Técnicas de respiración que te ayudarán a conciliar el sueño en pocos minutos",
+      description: "Un buen descanso es esencial...",
+      image: "https://velfont.com/wp-content/uploads/Octubre-1-.png", // Reemplaza con la URL real de la imagen
+      url: "https://velfont.com/tecnicas-de-respiracion-que-te-ayudaran-a-conciliar-el-sueno-rapidamente/",
     },
     {
-      title: "Beneficios de la meditación para la salud mental",
-      description: "La meditación puede ayudarte a reducir la ansiedad y mejorar tu bienestar general. Aprende cómo empezar.",
-      image: "https://via.placeholder.com/150", // Reemplaza con la URL real de la imagen
-      url: "https://example.com/mental2",
+      title: "Beneficios de la meditación en la salud mental",
+      description: "La meditación tiene muchos beneficios, que no solo favorecen a nuestro sistema emocional...",
+      image: "https://vidasaludable.udec.cl/sites/default/files/styles/large/public/meditación_cvs.jpg?itok=qv6QpN5L", // Reemplaza con la URL real de la imagen
+      url: "https://vidasaludable.udec.cl/node/370",
     },
     {
-      title: "Consejos para mejorar la calidad de tu sueño",
-      description: "Un buen descanso es fundamental para la salud mental. Descubre cómo mejorar tu calidad de sueño.",
-      image: "https://via.placeholder.com/150", // Reemplaza con la URL real de la imagen
-      url: "https://example.com/mental3",
+      title: "5 hábitos que pueden ayudarte a reducir el estrés",
+      description: "El 90% de la población mundial sufre estrés, que se manifiesta de diferentes maneras.",
+      image: "https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic2543855.jpg?w=1600&q=50", // Reemplaza con la URL real de la imagen
+      url: "https://www.nationalgeographicla.com/ciencia/2023/02/5-habitos-que-pueden-ayudarte-a-reducir-el-estres",
     },
   ];
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-col items-center px-10 py-20">
-      <div className="absolute top-5 left-5">
-        <LinkButton type="secondary" href="/">
-          Volver a Inicio
-        </LinkButton>
+    <div className="relative w-full h-full min-h-screen">
+      <div className="absolute inset-0 bg-cover bg-right filter blur-sm" style={{ backgroundImage: 'url(/background.webp)' }}></div>
+      <div className="relative w-full h-full flex flex-col items-center px-10 py-20">
+        <div className="absolute top-5 left-5">
+          <BackButton href="/" />
+        </div>
+        <FormButton href="/formulario-mental" >
+          LLenar encuesta de salud mental
+        </FormButton>
+        <StateEvolution type="mental" />
+        
+        {/* Agrega Recommendations pasando mentalHealthArticles como prop */}
+        <Recommendations articles={mentalHealthArticles} />
       </div>
-      <LinkButton type="primary" href="/formulario-mental">
-        LLenar encuesta de salud mental
-      </LinkButton>
-      <StateEvolution type="mental" />
-      
-      {/* Agrega Recommendations pasando mentalHealthArticles como prop */}
-      <Recommendations articles={mentalHealthArticles} />
     </div>
   );
 }

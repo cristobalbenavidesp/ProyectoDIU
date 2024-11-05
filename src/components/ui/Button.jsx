@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function Button({ onClick, children, type }) {
   const style = {
-    primary: "bg-button-primary text-white",
+    primary: "bg-[#65558F] text-white",
     secondary: "bg-button-secondary text-white",
     danger: "bg-button-danger text-white",
   };
