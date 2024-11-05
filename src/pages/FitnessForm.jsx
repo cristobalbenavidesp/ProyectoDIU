@@ -2,6 +2,7 @@ import Button from "../components/ui/Button";
 import toast from "react-hot-toast";
 import { FormsContext } from "../context/FormsContext";
 import { useContext } from "react";
+import LinkButton from "../components/ui/LinkButton";
 
 const FitnessQuestions = [
   {
@@ -71,34 +72,44 @@ function FitnessForm() {
   }
 
   return (
-    <form
-      className="w-full h-full min-h-screen flex flex-col items-center place-content-center gap-5"
-      onSubmit={handleSubmission}
-    >
-      <h1 className="text-xl text-center">
-        Formulario diario de estado físico
-      </h1>
-      <ul className="flex flex-col gap-5 mb-5">
-        {FitnessQuestions.map((question) => (
-          <li key={question.id} className="flex flex-col">
-            <label className="flex flex-col">
-              {question.question}
-              <select id={question.id} name={question.id} defaultValue={""}>
-                <option value="" disabled>
-                  Elige una opción
-                </option>
-                {question.options.map(([option, score], index) => (
-                  <option key={`${question.id}-${index}`} value={score}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </li>
-        ))}
-      </ul>
-      <Button type="primary">Enviar</Button>
-    </form>
+    <div className="w-full min-h-screen flex flex-col">
+      {/* Encabezado con el botón de retroceso */}
+      <header className="w-full p-5">
+        <LinkButton href="/perfil-fisico" type="secondary">
+          Volver al perfil de salud fisica
+        </LinkButton>
+      </header>
+
+      {/* Sección principal con el formulario */}
+      <main className="flex-grow flex items-center justify-center p-5">
+        <form
+          className="w-full max-w-md flex flex-col items-center gap-5"
+          onSubmit={handleSubmission}
+        >
+          <h1 className="text-xl text-center">Formulario diario de estado físico</h1>
+          <ul className="flex flex-col gap-5 mb-5">
+            {FitnessQuestions.map((question) => (
+              <li key={question.id} className="flex flex-col">
+                <label className="flex flex-col">
+                  {question.question}
+                  <select id={question.id} name={question.id} defaultValue={""}>
+                    <option value="" disabled>
+                      Elige una opción
+                    </option>
+                    {question.options.map(([option, score], index) => (
+                      <option key={`${question.id}-${index}`} value={score}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </li>
+            ))}
+          </ul>
+          <Button type="primary">Enviar</Button>
+        </form>
+      </main>
+    </div>
   );
 }
 
