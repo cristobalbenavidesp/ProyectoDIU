@@ -34,7 +34,7 @@ function StateEvolution({ type }) {
   return (
     <article className="py-5 w-full ">
       {showChart && (
-        <div className="w-full h-fit relative">
+        <div className="w-full h-fit relative p-3 bg-white rounded-lg shadow">
           <div className="w-full absolute top-10 z-30 flex items-center place-content-center gap-3">
             <div className="w-8 h-4 bg-blue-500"></div>
             <span>Puntaje</span>

@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 import Button from "../components/ui/Button";
 import toast from "react-hot-toast";
 import BackButton from "../components/ui/BackButton";
@@ -78,27 +78,28 @@ function MentalHealthForm() {
   }
 
   return (
-    <div className="relative w-full min-h-screen">
-      <div className="absolute inset-0 bg-cover bg-right filter blur-sm" style={{ backgroundImage: 'url(/background.webp)' }}></div>
-      <div className="relative w-full min-h-screen flex flex-col">
-        {/* Encabezado con el botón de retroceso */}
-        <header className="w-full p-5">
-          <BackButton href="/perfil-mental" />
-        </header>
-
-        {/* Sección principal con el formulario */}
+    <div className="w-full min-h-screen">
+      <div className="w-full min-h-screen flex flex-col">
+        <BackButton href="/perfil-mental" />
         <main className="flex-grow flex items-center justify-center p-5">
-        <form
-            className="w-full max-w-md flex flex-col items-center gap-5 bg-white rounded-lg py-8"
+          <form
+            className="w-full max-w-md flex flex-col items-center gap-5 bg-white rounded-lg py-8 shadow-lg px-2"
             onSubmit={handleSubmission}
           >
-            <h1 className="text-xl text-center">Formulario diario de salud mental</h1>
-            <ul className="flex flex-col gap-5 mb-5">
+            <h1 className="text-3xl text-center">
+              Formulario diario de salud mental
+            </h1>
+            <ul className="flex flex-col gap-5 mb-5 text-lg">
               {MentalHealthQuestions.map((question) => (
                 <li key={question.id} className="flex flex-col">
                   <label className="flex flex-col">
                     {question.question}
-                    <select id={question.id} name={question.id} defaultValue={""}>
+                    <select
+                      id={question.id}
+                      name={question.id}
+                      defaultValue={""}
+                      className="py-3 px-2"
+                    >
                       <option value="" disabled>
                         Elige una opción
                       </option>

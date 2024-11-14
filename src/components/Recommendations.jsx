@@ -4,15 +4,15 @@ import Card from "./ui/Card";
 
 function Recommendations({ articles }) {
   return (
-    <article className="py-5 w-full h-fit bg-cover bg-center rounded-lg  p-5">
-      <h1 className="text-xl mb-5 text-center text-white font-semibold ">
+    <article className="py-5 w-full h-fit bg-cover bg-center rounded-lg">
+      <h1 className="text-xl z-10 mb-5 text-center font-semibold ">
         Recomendaciones según tu estado
       </h1>
       <ul className="flex flex-col gap-3 py-5">
         {articles.map((article, index) => (
           <li key={index} className="flex">
             <Card>
-              <div className="flex flex-col gap-3 pb-2">
+              <div className="flex flex-col gap-3 pb-2 w-full">
                 <img
                   src={article.image}
                   alt={article.title}
