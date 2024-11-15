@@ -30,11 +30,12 @@ function FitnessProfile() {
   ];
 
   return (
-    <div className="w-full h-full min-h-screen">
+    <div className="relative w-full h-full min-h-screen">
+      <div className="absolute inset-0 bg-cover bg-left filter blur-[2px]" style={{ backgroundImage: 'url(/background.webp)' }}></div>
       <BackButton href="/" />
-      <div className="w-full h-full flex flex-col items-center px-10 py-20">
+      <div className="relative w-full h-full flex flex-col items-center px-10 py-20">
         <FormButton href="/formulario-fisico">
-          LLenar encuesta de estado físico
+          Actualiza tu estado fisico
         </FormButton>
         <StateEvolution type="physical" />
 

@@ -72,8 +72,9 @@ function FitnessForm() {
   }
 
   return (
-    <div className="w-full min-h-screen">
-      <div className="w-full min-h-screen flex flex-col">
+    <div className="relative w-full min-h-screen">
+      <div className="absolute inset-0 bg-cover bg-left filter blur-[2px]" style={{ backgroundImage: 'url(/background.webp)' }}></div>
+      <div className="relative w-full min-h-screen flex flex-col">
         <BackButton href="/perfil-fisico" />
         <main className="flex-grow flex items-center justify-center p-5">
           <form
@@ -107,7 +108,7 @@ function FitnessForm() {
                 </li>
               ))}
             </ul>
-            <Button type="primary">Enviar</Button>
+            <Button type="primary">Registrar</Button>
           </form>
         </main>
       </div>

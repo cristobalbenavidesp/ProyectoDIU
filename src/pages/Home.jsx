@@ -6,11 +6,11 @@ function Home() {
   return (
     <div className="relative w-full h-full min-h-screen">
       {/* Fondo con desenfoque */}
-      <div className="absolute inset-0 bg-[url('/background.webp')] bg-cover bg-center filter blur-sm -z-10"></div>
+      <div className="absolute inset-0 bg-[url('/background.webp')] bg-cover bg-center filter blur-[1px] -z-10"></div>
       
       {/* Contenido */}
       <div className="w-full min-h-screen flex flex-col items-center justify-center text-white px-4 relative z-10">
-        <div className="p-8 text-center">
+        <div className="p-28 text-center">
         <h1 className="text-4xl font-bold mb-8 text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)]">
             ¡Bienvenido, {userName}!
           </h1>
